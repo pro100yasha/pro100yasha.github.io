@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image:  url("img/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.counter{
+    z-index: 10;
+    font-size: 25px;
+    background-color: #888888;
+    width: max-content;
+    min-width: 150px;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.counter div{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    width: 40px;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    transition: transform 0.3s ease;
+    user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+}
+
+.img img{
+    height: 40vh;
+}
+
+.--select{
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+#snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    background-size: cover;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}

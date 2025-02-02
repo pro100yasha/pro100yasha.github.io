@@ -1,76 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="He goes mobile.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="flapp">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>flapp</title>
-  <link rel="manifest" href="manifest.json">
-
-  <script>
-    // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = '398061419';
-  </script>
-  <!-- This script adds the flutter initialization JS code -->
-  <script src="flutter.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>integratClick</title>
 </head>
 <body>
-<script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
-        }
-      });
-    });
-  </script>
-<script src="main.dart.js" type="application/javascript"></script>
-<script>
-       if ('serviceWorker' in navigator) {
-          // Service workers are supported. Use them.
-          window.addEventListener('load', function () {
-            // ADD THIS LINE
-            navigator.serviceWorker.register('/firebase-messaging-sw.js');
+    <div class="counter">
+        <div class="titles">
+            <b>Яша:</b>
+            <b>Паша:</b>
+            <b>Даша:</b>
+            <b>Мага:</b>
+            <b>Катя:</b>
+            <b>Света:</b>
+        </div>
+        
+        <div class="values">
+            <b id="vl1">0</b>
+            <b id="vl6">0</b>
+            <b id="vl3">0</b>
+            <b id="vl5">0</b>
+            <b id="vl4">0</b>
+            <b id="vl2">0</b>
+        </div>
+    </div>
 
-            // Wait for registration to finish before dropping the <script> tag.
-            // Otherwise, the browser will load the script multiple times,
-            // potentially different versions.
-            var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+    <div id="snow"></div>
+    
+    <div class="img " id="img1"><img draggable="false" src="img/1.png"></div>
+    <div class="img" id="img2"><img draggable="false" src="img/2.png"></div>
+    <div class="img" id="img3"><img draggable="false" src="img/3.png"></div>
+    <div class="img" id="img4"><img draggable="false" src="img/4.png"></div>
+    <div class="img" id="img5"><img draggable="false" src="img/5.png"></div>
+    <div class="img" id="img6"><img draggable="false" src="img/6.png"></div>
 
-            //  ...
-          });
-      }
-  </script>
+    <!-- Аудио элемент -->
+    <audio id="audio1" src="sounds/1.mp3"></audio>
+    <audio id="audio2" src="sounds/2.mp3"></audio>
+    <audio id="audio3" src="sounds/3.mp3"></audio>
+    <audio id="audio4" src="sounds/4.mp3"></audio>
+    <audio id="audio5" src="sounds/5.mp3"></audio>
+    <audio id="audio6" src="sounds/6.mp3"></audio>
+
+    <script src="script.js"></script>
+    
 </body>
 </html>
